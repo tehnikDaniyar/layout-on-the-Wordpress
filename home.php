@@ -126,36 +126,6 @@ Template Name: home
 									vulputate laoreet sapien a sit ante.
 								</div>
 							</div>
-							<div class="slider-works__slide swiper-slide">
-								<img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/02.jpg" alt="">
-								<div class="slider-works__decore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-									vulputate laoreet sapien a sit ante.
-								</div>
-							</div>
-							<div class="slider-works__slide swiper-slide">
-								<img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/03.jpg" alt="">
-								<div class="slider-works__decore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-									vulputate laoreet sapien a sit ante.
-								</div>
-							</div>
-							<div class="slider-works__slide swiper-slide">
-								<img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/01.jpg" alt="">
-								<div class="slider-works__decore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-									vulputate laoreet sapien a sit ante.
-								</div>
-							</div>
-							<div class="slider-works__slide swiper-slide">
-								<img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/02.jpg" alt="">
-								<div class="slider-works__decore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-									vulputate laoreet sapien a sit ante.
-								</div>
-							</div>
-							<div class="slider-works__slide swiper-slide">
-								<img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/03.jpg" alt="">
-								<div class="slider-works__decore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-									vulputate laoreet sapien a sit ante.
-								</div>
-							</div>
 						</div>
 					</div>
 					<div class="slider-works__prev swiper-button-prev buttonSlider"></div>
