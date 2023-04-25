@@ -13,6 +13,7 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
+				<?php the_custom_logo() ?>
 				<nav class="header__menu">
 					<ul class="header__list list">
 						<li><a href="#">Главная</a></li>

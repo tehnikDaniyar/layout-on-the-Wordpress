@@ -11,6 +11,9 @@
 						<li><a href="#">Галерея работ</a></li>
 					</ul>
 				</nav>
+				<div class="footer__logo">
+				<?php the_custom_logo(); ?>
+				</div>
 			</div>
 		</footer>
 	</div>

@@ -120,25 +120,20 @@ Template Name: home
 				<div class="slider-works__container">
 					<div class="slider-works__swiper swiper">
 						<div class="slider-works__wrapper swiper-wrapper">
-
-
 									<?php
 										global $post;
-
 										$myposts = get_posts([ 
 											'numberposts' => -1,
 											// 'offset'      => 1,
 											// 'category'    => 1
 										]);
-
 										if( $myposts ){
 											foreach( $myposts as $post ){
 												setup_postdata( $post );
 									?>
-
 												<!-- Вывод постов, функции цикла: the_title() и т.д. -->
 												<div class="slider-works__slide swiper-slide">
-													<?php the_title('<h2 class="slider-works__title">', '</h2>', true); ?>
+													<!-- <?php the_title('<h2 class="slider-works__title">', '</h2>', true); ?> -->
 													<?php the_post_thumbnail('', array('class' => 'slider-works__img')); ?>
 													<!-- <img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/01.jpg" alt=""> -->
 													<div class="slider-works__decore"><?php the_content(); ?>
@@ -149,8 +144,6 @@ Template Name: home
 										}
 										wp_reset_postdata(); // Сбрасываем $post
 									?>
-
-
 						</div>
 					</div>
 					<div class="slider-works__prev swiper-button-prev buttonSlider"></div>
@@ -384,8 +377,7 @@ Template Name: home
 					<h2 class="ouranswer__title">ответим на любой вопрос</h2>
 					<div class="ouranswer__decore decore"><span></span><span></span><span></span><span></span></div>
 					<form action="#" class="ouranswer__form">
-						<input type="text" class="ouranswer__input" name="name" placeholder="имя">
-						<input type="text" class="ouranswer__input" name="tel" placeholder="телефон">
+					<?php echo do_shortcode('[contact-form-7 id="42" title="Контактная форма"]') ?>
 						<textarea name="question" class="ouranswer__question" cols="30" rows="10"
 							placeholder="Вопрос по дизайну, тюнингу и др."></textarea>
 						<div class="ouranswer__social">
@@ -393,7 +385,6 @@ Template Name: home
 							<a href="#" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/youtube.svg" alt="yuutobe"></a>
 							<a href="#" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/vk.svg" alt="vk"></a>
 						</div>
-						<button class="ouranswer__button" type="submit">отправить</button>
 						<div class="ouranswer__contacts">
 							<a href="#" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/point.svg" alt="point"><span>Eu
 									faucibus et rutrum fringilla orci nunc</span></a>
