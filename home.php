@@ -120,12 +120,37 @@ Template Name: home
 				<div class="slider-works__container">
 					<div class="slider-works__swiper swiper">
 						<div class="slider-works__wrapper swiper-wrapper">
-							<div class="slider-works__slide swiper-slide">
-								<img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/01.jpg" alt="">
-								<div class="slider-works__decore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-									vulputate laoreet sapien a sit ante.
-								</div>
-							</div>
+
+
+									<?php
+										global $post;
+
+										$myposts = get_posts([ 
+											'numberposts' => -1,
+											// 'offset'      => 1,
+											// 'category'    => 1
+										]);
+
+										if( $myposts ){
+											foreach( $myposts as $post ){
+												setup_postdata( $post );
+									?>
+
+												<!-- Вывод постов, функции цикла: the_title() и т.д. -->
+												<div class="slider-works__slide swiper-slide">
+													<h2 class="slider-works__title"><?php the_title(); ?></h2>
+													<img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/01.jpg" alt="">
+													<div class="slider-works__decore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+													vulputate laoreet sapien a sit ante.!!!!!!!!!!!!!
+													</div>
+												</div>
+									<?php 
+											}
+										}
+										wp_reset_postdata(); // Сбрасываем $post
+									?>
+
+
 						</div>
 					</div>
 					<div class="slider-works__prev swiper-button-prev buttonSlider"></div>
