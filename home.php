@@ -138,10 +138,10 @@ Template Name: home
 
 												<!-- Вывод постов, функции цикла: the_title() и т.д. -->
 												<div class="slider-works__slide swiper-slide">
-													<h2 class="slider-works__title"><?php the_title(); ?></h2>
-													<img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/01.jpg" alt="">
-													<div class="slider-works__decore">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-													vulputate laoreet sapien a sit ante.!!!!!!!!!!!!!
+													<?php the_title('<h2 class="slider-works__title">', '</h2>', true); ?>
+													<?php the_post_thumbnail('', array('class' => 'slider-works__img')); ?>
+													<!-- <img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/01.jpg" alt=""> -->
+													<div class="slider-works__decore"><?php the_content(); ?>
 													</div>
 												</div>
 									<?php 
