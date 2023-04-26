@@ -28,8 +28,8 @@ Template Name: home
 					</div>
 					<div class="top__info-item">
 						<h4 class="top__info-title">телефон:</h4>
-						<a href="tel:8(812)1234567" class="top__info-link">8 (812) 123-45-67</a href="tel:">
-						<a href="tel:89111234567" class="top__info-link">8-911-123-45-67</a href="tel:">
+						<a href="tel:8(812)1234567" class="top__info-link"><?php the_field('phone'); ?></a>
+						<a href="tel:89111234567" class="top__info-link"><?php the_field('phone_two'); ?></a>
 					</div>
 					<div class="top__info-item">
 						<h4 class="top__info-title">режим работы:</h4>
@@ -389,7 +389,7 @@ Template Name: home
 							<a href="#" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/point.svg" alt="point"><span>Eu
 									faucibus et rutrum fringilla orci nunc</span></a>
 							<a href="tel:88121234567" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/tel.svg"
-									alt="tel"><span>8 (812) 123-45-67</span></a>
+									alt="tel"><span><?php the_field('phone'); ?></span></a>
 							<a href="mail:test@test.ru" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/message.svg"
 									alt="message"><span>test@test.ru</span></a>
 						</div>
