@@ -28,8 +28,8 @@ Template Name: home
 					</div>
 					<div class="top__info-item">
 						<h4 class="top__info-title">телефон:</h4>
-						<a href="tel:8(812)1234567" class="top__info-link"><?php the_field('phone'); ?></a>
-						<a href="tel:89111234567" class="top__info-link"><?php the_field('phone_two'); ?></a>
+						<a href="tel:<?php the_field('number_for_attribute'); ?>" class="top__info-link"><?php the_field('phone'); ?></a>
+						<a href="tel:<?php the_field('phone_two'); ?>" class="top__info-link"><?php the_field('phone_two'); ?></a>
 					</div>
 					<div class="top__info-item">
 						<h4 class="top__info-title">режим работы:</h4>
@@ -381,14 +381,14 @@ Template Name: home
 						<textarea name="question" class="ouranswer__question" cols="30" rows="10"
 							placeholder="Вопрос по дизайну, тюнингу и др."></textarea>
 						<div class="ouranswer__social">
-							<a href="#" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/twitter.svg" alt="twitter"></a>
-							<a href="#" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/youtube.svg" alt="yuutobe"></a>
-							<a href="#" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/vk.svg" alt="vk"></a>
+							<a href="<?php the_field('telegramm') ?>" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/twitter.svg" alt="twitter"></a>
+							<a href="<?php the_field('you_tube') ?>" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/youtube.svg" alt="yuutobe"></a>
+							<a href="<?php the_field('vk') ?>" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/vk.svg" alt="vk"></a>
 						</div>
 						<div class="ouranswer__contacts">
 							<a href="#" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/point.svg" alt="point"><span>Eu
 									faucibus et rutrum fringilla orci nunc</span></a>
-							<a href="tel:88121234567" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/tel.svg"
+							<a href="tel:<?php the_field('phone'); ?>" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/tel.svg"
 									alt="tel"><span><?php the_field('phone'); ?></span></a>
 							<a href="mail:test@test.ru" class="ouranswer__link"><img src="<?php bloginfo('template_url');?>/assets/img//ouranswer/icons/message.svg"
 									alt="message"><span>test@test.ru</span></a>
