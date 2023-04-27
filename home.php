@@ -22,9 +22,9 @@ Template Name: home
 				<div class="top__info">
 					<div class="top__info-item">
 						<h4 class="top__info-title">адрес:</h4>
-						<p class="top__info-subtitle">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit
-						</p>
+						<div class="top__info-subtitle">
+							<?php the_field('address'); ?>
+						</div>
 					</div>
 					<div class="top__info-item">
 						<h4 class="top__info-title">телефон:</h4>
@@ -33,8 +33,7 @@ Template Name: home
 					</div>
 					<div class="top__info-item">
 						<h4 class="top__info-title">режим работы:</h4>
-						<p class="top__info-subtitle">пн-пт : 10:00 - 20:00</p>
-						<p class="top__info-subtitle">сб-вск : 12:00 - 20:00</p>
+						<div class="top__info-subtitle"><?php the_field('workink_hourse'); ?></div>
 					</div>
 
 				</div>
