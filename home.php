@@ -7,17 +7,15 @@ Template Name: home
 		<main class="main">
 			<section class="top">
 				<div class="top__container">
-					<h1 class="top__title">car musc</h1>
+					<h1 class="top__title"><?php the_field('title'); ?></h1>
 					<div class="top__decore decore">
 						<span></span>
 						<span></span>
 						<span></span>
 						<span></span>
 					</div>
-					<p class="top__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sit officiis enim
-						unde!
-					</p>
-					<a href="#" class="top__button button">наши услуги</a>
+					<p class="top__subtitle"><?php the_field('subtitle'); ?></p>
+					<a href="#_services" class="top__button button">наши услуги</a>
 				</div>
 				<div class="top__info">
 					<div class="top__info-item">
@@ -221,7 +219,8 @@ Template Name: home
 					</div>
 				</div>
 			</section>
-			<section class="services">
+			<section class="services" >
+				<a name="_services"></a>
 				<div class="services__container">
 					<h2 class="services__title">Наши услуги</h2>
 					<div class="services__decore decore">
