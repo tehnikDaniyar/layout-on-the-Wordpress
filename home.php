@@ -5,8 +5,9 @@ Template Name: home
 ?>
 <?php get_header(); ?>
 		<main class="main">
-			<section class="top">
+			<section class="top _ibg">
 				<div class="top__container">
+					<img src="<?php  the_field('top-image'); ?>" alt="car">
 					<h1 class="top__title"><?php the_field('title'); ?></h1>
 					<div class="top__decore decore">
 						<span></span>
@@ -131,8 +132,8 @@ Template Name: home
 												<!-- Вывод постов, функции цикла: the_title() и т.д. -->
 												<div class="slider-works__slide swiper-slide">
 													<!-- <?php the_title('<h2 class="slider-works__title">', '</h2>', true); ?> -->
+													<h2 class="slider-works__title"><?php the_title(); ?></h2>
 													<?php the_post_thumbnail('', array('class' => 'slider-works__img')); ?>
-													<!-- <img class="slider-works__img" src="<?php bloginfo('template_url');?>/assets/img//slider-works/01.jpg" alt=""> -->
 													<div class="slider-works__decore"><?php the_content(); ?>
 													</div>
 												</div>
