@@ -40,77 +40,14 @@ Template Name: home
 			<section class="progress">
 				<div class="progress__container">
 					<div class="progress__info">
-						<h2 class="progress__title">наши достижения от кубка россии до чемпионатов мира</h2>
+						<h2 class="progress__title"><?php the_field('services_title'); ?></h2>
 						<div class="progress__decore decore">
 							<span></span><span></span><span></span><span></span>
 						</div>
-						<p class="progress__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant
-							tincidunt aliquam tincidunt pretium sodales. Tristique odio pellentesque et tincidunt posuere arcu
-							purus lobortis risus. Urna, ut amet odio orci magnis praesent ultrices. Praesent malesuada lacus
-							tellus tristique sit at. Sed viverra nulla nam arcu, non iaculis pretium, volutpat.
-						</p>
+						<p class="progress__subtitle"><?php the_field('services_text'); ?></p>
 					</div>
 					<div class="progress__columns">
-						<div class="progress__column">
-							<div class="progress__column-item">
-								<div class="progress__column-number">#1</div>
-								<p class="progress__column-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Quisque dui
-								</p>
-							</div>
-							<div class="progress__column-item">
-								<div class="progress__column-number">#1</div>
-								<p class="progress__column-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Quisque dui
-								</p>
-							</div>
-							<div class="progress__column-item">
-								<div class="progress__column-number">#1</div>
-								<p class="progress__column-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Quisque dui
-								</p>
-							</div>
-							<div class="progress__column-item">
-								<div class="progress__column-number">#1</div>
-								<p class="progress__column-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Quisque dui
-								</p>
-							</div>
-						</div>
-						<div class="progress__column">
-							<div class="progress__column-item">
-								<div class="progress__column-number">#1</div>
-								<p class="progress__column-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Quisque dui
-								</p>
-							</div>
-							<div class="progress__column-item">
-								<div class="progress__column-number">#1</div>
-								<p class="progress__column-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Quisque dui
-								</p>
-							</div>
-							<div class="progress__column-item">
-								<div class="progress__column-number">#1</div>
-								<p class="progress__column-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Quisque dui
-								</p>
-							</div>
-							<div class="progress__column-item">
-								<div class="progress__column-number">#1</div>
-								<p class="progress__column-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Quisque dui
-								</p>
-							</div>
-						</div>
+						<?php the_field('services_items'); ?>
 					</div>
 				</div>
 			</section>
@@ -122,8 +59,8 @@ Template Name: home
 										global $post;
 										$myposts = get_posts([ 
 											'numberposts' => -1,
-											// 'offset'      => 1,
-											// 'category'    => 1
+											// 'offset'      => 2,
+											'category'    => 3
 										]);
 										if( $myposts ){
 											foreach( $myposts as $post ){
@@ -277,27 +214,30 @@ Template Name: home
 					<div class="benefits__slider">
 						<div class="benefits__slider-swiper swiper">
 							<div class="benefits__slider-wrapper swiper-wrapper">
-								<div class="benefits__slider-slide swiper-slide">
-									<img src="<?php bloginfo('template_url');?>/assets/img//benefits/image2.jpg" alt="img" class="benefits__slider-image">
-									<p class="benefits__slider-description">Lorem ipsum dolor sit amet, consectetur adipiscing
-										elit.
-										Pellentesque auctor nibh feugiat est. Consectetur lectus.
-									</p>
-								</div>
-								<div class="benefits__slider-slide swiper-slide">
-									<img src="<?php bloginfo('template_url');?>/assets/img//benefits/image2.jpg" alt="img" class="benefits__slider-image">
-									<p class="benefits__slider-description">Lorem ipsum dolor sit amet, consectetur adipiscing
-										elit.
-										Pellentesque auctor nibh feugiat est. Consectetur lectus.
-									</p>
-								</div>
-								<div class="benefits__slider-slide swiper-slide">
-									<img src="<?php bloginfo('template_url');?>/assets/img//benefits/image2.jpg" alt="img" class="benefits__slider-image">
-									<p class="benefits__slider-description">Lorem ipsum dolor sit amet, consectetur adipiscing
-										elit.
-										Pellentesque auctor nibh feugiat est. Consectetur lectus.
-									</p>
-								</div>
+							<?php
+										global $post;
+										$myposts = get_posts([ 
+											'numberposts' => -1,
+											// 'offset'      => 2,
+											'category'    => 3
+										]);
+										if( $myposts ){
+											foreach( $myposts as $post ){
+												setup_postdata( $post );
+									?>
+												<!-- Вывод постов, функции цикла: the_title() и т.д. -->
+												<div class="benefits__slider-slide swiper-slide">
+												<?php the_post_thumbnail('', array('class' => 'benefits__slider-image')); ?>
+													<p class="benefits__slider-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit.
+														Pellentesque auctor nibh feugiat est. Consectetur lectus.
+													</p>
+												</div>
+									<?php 
+											}
+										}
+										wp_reset_postdata(); // Сбрасываем $post
+									?>
 							</div>
 							<div class="benefits__control">
 								<div class="benefits__slider-prev buttonSlider"></div>
