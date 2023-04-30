@@ -214,12 +214,12 @@ Template Name: home
 					<div class="benefits__slider">
 						<div class="benefits__slider-swiper swiper">
 							<div class="benefits__slider-wrapper swiper-wrapper">
-							<?php
+									<?php
 										global $post;
 										$myposts = get_posts([ 
 											'numberposts' => -1,
 											// 'offset'      => 2,
-											'category'    => 3
+											'category'    => 4
 										]);
 										if( $myposts ){
 											foreach( $myposts as $post ){
